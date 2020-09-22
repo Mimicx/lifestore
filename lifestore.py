@@ -1525,5 +1525,22 @@ productos_menos_vendidos = productosMenosVendidos(50)
 print('\n 50 PRODUCTOS CON MENORES VENTAS POR CATEGORIA \n')
 print(productos_menos_vendidos[1]['productos' ])
 
+print("\n 100 Productos con los menores busquedas \n")
+
+def productosMenoresBusquedas(cantidad):
+    def busquedas_func(e):
+        return e["busquedas"]
+
+    busquedas = 0
+    busquedas_por_producto = []
+    busquedas = []
+    for i in rage(len(categorias)):
+        return i
+        
+
+    
+productos_menos_busquedas = productosMenoresBusquedas(100)
+print('\n 100 PRODUCTOS CON MENORES BUSQUEDAS POR CATEGORIA \n')
+print(productos_menos_busquedas[1]['productos' ])
 
 

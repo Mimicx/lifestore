@@ -1534,9 +1534,16 @@ def productosMenoresBusquedas(cantidad):
     busquedas = 0
     busquedas_por_producto = []
     busquedas = []
-    for i in rage(len(categorias)):
-        return i
-        
+    for i in range(len(categorias)):
+        for j in range(len(lifestore_products)):
+            for l in range(len(lifestore_searches)):
+                if(lifestore_searches[l][1] == lifestore_products[j][0]):
+                    busquedas += 1
+            busquedas_por_producto.append({'id': lifestore_products[j][0], 'busquedas': busquedas})
+            busquedas_por_producto.sort(reverse=True, key=busquedas_func)
+            busquedas = 0
+        busquedas.append({'categoria': categorias[i]['categoria'], 'productos': busquedas_por_producto})
+    return busquedas[0:cantidad]        
 
     
 productos_menos_busquedas = productosMenoresBusquedas(100)
